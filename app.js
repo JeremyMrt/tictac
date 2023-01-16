@@ -39,7 +39,7 @@ const gameBoard = (() => {
 
   gameBoardContent.classList.add("gameboard");
 
-  let gameBoardArray = ["X", "X", "", "O", "i", "O", "X", "X", "X"];
+  let gameBoardArray = ["", "X", "", "O", "i", "", "X", "X", "X"];
 
   gameBoardArray.forEach((item) => {
     const squareDiv = document.createElement("div");
