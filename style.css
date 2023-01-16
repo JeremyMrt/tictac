@@ -1,0 +1,140 @@
+/* Minimal CSS reset by Digital Ocean */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* End of Reset */
+
+body {
+  background: rgb(255, 134, 195);
+  background: linear-gradient(
+    45deg,
+    rgba(255, 134, 195, 1) 0%,
+    rgba(252, 195, 121, 0.8211659663865546) 47%,
+    rgba(166, 110, 254, 1) 100%
+  );
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+body.header-top {
+  justify-content: flex-start;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3vh;
+  transition: all 0.5s ease-in;
+}
+
+header > h1 {
+  font-weight: 700;
+  font-size: 7rem;
+}
+
+header.header-top {
+  width: 100%;
+  background-color: white;
+  align-items: flex-start;
+  padding: 20px;
+  transition: all 0.2s ease;
+  -webkit-box-shadow: 0px 10px 13px -7px #000000,
+    5px 8px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 0px 10px 13px -7px #000000, 5px 8px 15px 5px rgba(0, 0, 0, 0);
+}
+
+header.header-top > h1 {
+  font-size: 3rem;
+}
+
+#start-btn {
+  appearance: none;
+  outline: none;
+  border: 1px solid black;
+  background-color: #a66efe;
+  width: 270px;
+  height: 100px;
+  font-weight: 700;
+  font-size: 4rem;
+  -webkit-box-shadow: 13px 12px 0px 0px #000000;
+  box-shadow: 12px 12px 0px 0px #000000;
+}
+
+#start-btn:hover {
+  filter: brightness(120%);
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.game-content > h2 {
+  font-size: 2.5rem;
+  margin: 3vh;
+}
+
+.gameboard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0px;
+  align-content: center;
+  justify-content: center;
+  transition: all 2s ease-in;
+}
+
+.gameboard-square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 9rem;
+  font-weight: 900;
+  background-color: white;
+  border: 2px solid black;
+  height: 150px;
+  width: 150px;
+}
+
+.gameboard-square:hover {
+  background-color: #a56efe8e;
+  cursor: pointer;
+}
