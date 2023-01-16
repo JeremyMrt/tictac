@@ -1,13 +1,12 @@
 const startBtn = document.getElementById("start-btn");
+const entryForm = document.querySelector(".entry-form");
+const nameInput = document.getElementById("name").textContent;
 const header = document.querySelector("header");
 const gameContent = document.querySelector(".game-content");
 
 startBtn.addEventListener("click", () => {
-  startBtn.classList.add("hidden");
-  gameContent.classList.remove("hidden");
-
-  header.classList.add("header-top");
-  document.body.classList.add("header-top");
+  header.classList.add("hidden");
+  entryForm.classList.remove("hidden");
 });
 
 const gameBoard = (() => {
