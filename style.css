@@ -47,43 +47,25 @@ body {
   );
   height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-family: "Fredoka One", cursive;
-}
-
-body.header-top {
-  justify-content: flex-start;
+  overflow: hidden;
+  position: relative;
 }
 
 header {
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 3vh;
-  transition: all 0.5s ease-in;
 }
 
 header > h1 {
   font-weight: 700;
   font-size: 7rem;
   letter-spacing: 0.6vmax;
-}
-
-header.header-top {
-  width: 100%;
-  background-color: white;
-  align-items: flex-start;
-  padding: 20px;
-  transition: all 0.2s ease;
-  -webkit-box-shadow: 0px 10px 13px -7px #000000,
-    5px 8px 15px 5px rgba(0, 0, 0, 0);
-  box-shadow: 0px 10px 13px -7px #000000, 5px 8px 15px 5px rgba(0, 0, 0, 0);
-}
-
-header.header-top > h1 {
-  font-size: 3rem;
 }
 
 #start-btn {
@@ -104,7 +86,18 @@ header.header-top > h1 {
   cursor: pointer;
 }
 
-.entry-form {
+.entry-form,
+.game-content {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(100vw);
+}
+
+#form1,
+#form2 {
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -112,20 +105,52 @@ header.header-top > h1 {
   font-size: 2.1rem;
 }
 
-.entry-form > input {
+#form1 > input {
   font-size: 1.5rem;
-  width: 100%;
+  /* width: 100%; */
   height: 5vh;
   padding: 1vmax;
   font-family: inherit;
 }
 
-.entry-form > .fa-arrow-right {
+#form1 > .fa-arrow-right {
   align-self: flex-end;
   padding-right: 1vmax;
 }
 
-.entry-form > .fa-arrow-right:hover {
+#form1 > .fa-arrow-right:hover {
+  cursor: pointer;
+}
+
+#form2 {
+  transform: translateX(100vw);
+}
+.markers-choices {
+  display: flex;
+  gap: 5vw;
+}
+
+.fa-xmark,
+.fa-o {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid black;
+  font-size: 5rem;
+  background-color: #a66efe;
+  width: 150px;
+  height: 150px;
+  -webkit-box-shadow: 13px 12px 0px 0px #000000;
+  box-shadow: 12px 12px 0px 0px #000000;
+}
+
+.fa-xmark {
+  font-size: 6rem;
+}
+
+.fa-xmark:hover,
+.fa-o:hover {
+  filter: brightness(120%);
   cursor: pointer;
 }
 
@@ -160,8 +185,4 @@ header.header-top > h1 {
 .gameboard-square:hover {
   background-color: #a56efe8e;
   cursor: pointer;
-}
-
-.hidden {
-  display: none;
 }

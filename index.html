@@ -24,14 +24,21 @@
       <button id="start-btn">Start</button>
     </header>
 
-    <section class="entry-form hidden">
-      <h2>Tell me your name</h2>
-      <input type="text" id="name" placeholder="Toe" />
-      <i class="fa-solid fa-arrow-right"></i>
+    <section class="entry-form">
+      <div id="form1">
+        <h2>Tell me your name</h2>
+        <input type="text" id="name" placeholder="Toe" />
+        <i class="fa-solid fa-arrow-right" onclick="changeFormPage()"></i>
+      </div>
+      <div id="form2">
+        <h2>What will your choice be ?</h2>
+        <div class="markers-choices">
+          <i class="fa-sharp fa-solid fa-xmark marker" id="X"></i>
+          <i class="fa-solid fa-o marker" id="O"></i>
+        </div>
+      </div>
     </section>
 
-    <section class="game-content hidden">
-      <h2>Choose your side</h2>
-    </section>
+    <section class="game-content"></section>
   </body>
 </html>
